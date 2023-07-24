@@ -1,0 +1,138 @@
+@use './mixins/mixins.scss' as *;
+
+@include b(tn-comment-list) {
+  position: relative;
+  width: 100%;
+  padding: 30rpx;
+
+  /* 评论主列表 start */
+  @include e(item) {
+    position: relative;
+    width: 100%;
+    margin-top: 40rpx;
+
+    &:first-of-type {
+      margin-top: 0rpx;
+    }
+  }
+  @include e(item-data) {
+    position: relative;
+    width: 100%;
+    display: flex;
+
+    @include m(left) {
+      flex-shrink: 0;
+      flex-grow: 0;
+      margin-right: 20rpx;
+    }
+    @include m(right) {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+  @include e(main-data) {
+    position: relative;
+    width: 100%;
+  }
+  /* 评论主列表 end */
+
+  /* 主评论下的列表 start */
+  @include e(reply-data) {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  @include e(reply-item) {
+    position: relative;
+    width: 100%;
+    margin-top: 30rpx;
+    display: flex;
+
+    &:first-of-type {
+      margin-top: 20rpx;
+    }
+
+    @include m(left) {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: 20rpx;
+    }
+
+    @include m(right) {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+  /* 主评论下的列表 end */
+
+  /* 查看更多 操作 start */
+  @include e(show-more-operation) {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24rpx;
+    line-height: 1;
+    color: var(--tn-color-gray);
+    margin-top: 20rpx;
+
+    @include m(tips) {
+      position: relative;
+      margin-left: 76rpx;
+
+      &::before {
+        content: '';
+        width: 60rpx;
+        height: 2rpx;
+        border-radius: 80rpx;
+        background-color: var(--tn-color-gray);
+        position: absolute;
+        left: -16rpx;
+        top: 50%;
+        transform: translate(-100%, -50%);
+      }
+    }
+    @include m(icon) {
+      margin-top: 4rpx;
+      margin-left: 6rpx;
+    }
+  }
+  /* 查看更多 操作 end */
+
+  /* 评论信息 start */
+  @include e(nickname) {
+    font-size: 26rpx;
+    color: var(--tn-color-gray);
+  }
+  @include e(content) {
+    margin-top: 10rpx;
+  }
+  @include e(bottom-operation) {
+    margin-top: 10rpx;
+    position: relative;
+    width: 100%;
+  }
+  @include e(reply-nickname) {
+    display: flex;
+    align-items: center;
+
+    .author-nickname {
+      position: relative;
+      margin-left: 40rpx;
+
+      &::before {
+        content: '';
+        width: 0rpx;
+        height: 0rpx;
+        border-color: transparent transparent transparent var(--tn-color-gray);
+        border-style: solid;
+        border-width: 10rpx;
+        position: absolute;
+        left: -14rpx;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  /* 评论信息 end */
+}
