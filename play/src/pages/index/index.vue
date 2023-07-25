@@ -47,10 +47,10 @@ const generateCommentListData = () => {
       comment.push({
         id,
         avatar: getRandomAvatar(),
-        nickname: `图鸟${getRandomNumber()}`,
+        nickname: `图鸟${getRandomNumber()}kldfjdk克里斯朵夫家的六块腹肌你看大家反馈你的世界佛诶跑我房间可能大煞风景可能打飞机的是可能风刀霜剑`,
         date: '07-22',
         position: '广东',
-        content: `这是一条回复-${id}-${getRandomNumber()}`,
+        content: `这是一条回复-${id}-${getRandomNumber()}看到了房间的分开了多久啊法律框架放弃哦品味i俄飞机的旅客煞风景对你说分开；几滴漏式咖啡机你的快速反击大厦看能否加我企鹅哦IP发i接纳开发的风景的；了`,
         likeActive: false,
         likeCount: getRandomNumber(),
         dislikeActive: false,

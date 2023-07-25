@@ -27,7 +27,7 @@
     }
     @include m(right) {
       flex-grow: 1;
-      flex-shrink: 0;
+      flex-shrink: 1;
     }
   }
   @include e(main-data) {
@@ -45,6 +45,7 @@
   @include e(reply-item) {
     position: relative;
     width: 100%;
+    max-width: 100%;
     margin-top: 30rpx;
     display: flex;
 
@@ -60,7 +61,7 @@
 
     @include m(right) {
       flex-grow: 1;
-      flex-shrink: 0;
+      flex-shrink: 1;
     }
   }
   /* 主评论下的列表 end */
@@ -103,9 +104,13 @@
   @include e(nickname) {
     font-size: 26rpx;
     color: var(--tn-color-gray);
+    text-align: justify;
+    overflow-wrap: break-word;
   }
   @include e(content) {
     margin-top: 10rpx;
+    text-align: justify;
+    overflow-wrap: break-word;
   }
   @include e(bottom-operation) {
     margin-top: 10rpx;
