@@ -103,6 +103,20 @@ const replyClickHandle = ({ id }: TnReplyCommentParams) => {
     position: '广东',
     content: `这是一条插入的回复-r-${id}-${getRandomNumber()}`,
     allowDelete: getAllowDelete(),
+    disabledReply: false,
+  })
+}
+
+const pushNewComment = () => {
+  commentListRef.value?.addCommentReply('', {
+    id: `11 ${getRandomNumber()}`,
+    avatar: getRandomAvatar(),
+    nickname: `图鸟-r${getRandomNumber()}`,
+    date: '07-23',
+    position: '广东',
+    content: `这是一条插入的评论-r-${getRandomNumber()}`,
+    allowDelete: getAllowDelete(),
+    disabledReply: false,
   })
 }
 
@@ -114,7 +128,7 @@ const deleteClickHandle = (id: string | number) => {
 
 <template>
   <view class="content">
-    <view class="message">{{ message }}</view>
+    <view class="message" @tap="pushNewComment">{{ message }}</view>
   </view>
   <view class="comment-list">
     <TnCommentList

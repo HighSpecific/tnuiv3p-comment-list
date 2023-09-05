@@ -287,12 +287,13 @@ const deleteClickHandle = (id: string | number) => {
 
 #### TnReplyCommentData
 
-| 参数        | 类型             | 说明           | 必填 |
-| ----------- | ---------------- | -------------- | ---- |
-| id          | string \| number | 评论id         | 是   |
-| avatar      | string           | 用户头像       | 是   |
-| nickname    | string           | 用户名         | 是   |
-| date        | string           | 评论日期       | 是   |
-| position    | string           | 评论所在所属地 | 是   |
-| content     | string           | 评论内容       | 是   |
-| allowDelete | boolean          | 允许删除       | 是   |
+| 参数          | 类型             | 说明           | 必填 |
+| ------------- | ---------------- | -------------- | ---- |
+| id            | string \| number | 评论id         | 是   |
+| avatar        | string           | 用户头像       | 是   |
+| nickname      | string           | 用户名         | 是   |
+| date          | string           | 评论日期       | 是   |
+| position      | string           | 评论所在所属地 | 是   |
+| content       | string           | 评论内容       | 是   |
+| allowDelete   | boolean          | 允许删除       | 是   |
+| disabledReply | boolean          | 禁止回复       | 是   |

@@ -57,7 +57,7 @@ export default {
       <view v-if="!!data.position" :class="[ns.e('position')]">
         {{ data.position }}
       </view>
-      <view :class="[ns.e('reply')]">回复</view>
+      <view v-if="showReply" :class="[ns.e('reply')]">回复</view>
       <view
         v-if="showDelete"
         :class="ns.e('delete')"

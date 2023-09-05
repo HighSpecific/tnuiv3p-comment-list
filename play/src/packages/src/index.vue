@@ -73,6 +73,7 @@ defineExpose({
                 :active-like-icon-color="activeLikeIconColor"
                 :dislike-icon-color="dislikeIconColor"
                 :show-delete="item.allowDelete"
+                :show-reply="!item.disabledReply"
                 @like="() => likeClickHandle(item.id, index)"
                 @dislike="() => dislikeClickHandle(item.id, index)"
                 @delete="() => deleteClickHandle(item.id)"
@@ -129,6 +130,7 @@ defineExpose({
                     :active-like-icon-color="activeLikeIconColor"
                     :dislike-icon-color="dislikeIconColor"
                     :show-delete="commentItem.allowDelete"
+                    :show-reply="!commentItem.disabledReply"
                     @like="
                       () => likeClickHandle(commentItem.id, index, commentIndex)
                     "

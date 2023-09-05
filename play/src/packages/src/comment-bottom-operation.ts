@@ -28,6 +28,10 @@ export const commentBottomOperationProps = buildProps({
    * @description 是否显示删除按钮
    */
   showDelete: Boolean,
+  /**
+   * @description 是否显示回复按钮
+   */
+  showReply: Boolean,
 })
 export const commentBottomOperationEmits = {
   /**

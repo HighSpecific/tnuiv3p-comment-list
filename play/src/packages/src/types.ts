@@ -30,7 +30,14 @@ export type TnCommentListData = TnCommentListItem[]
 
 export type TnReplyCommentData = Pick<
   TnCommentListItem,
-  'id' | 'avatar' | 'nickname' | 'date' | 'position' | 'content' | 'allowDelete'
+  | 'id'
+  | 'avatar'
+  | 'nickname'
+  | 'date'
+  | 'position'
+  | 'content'
+  | 'allowDelete'
+  | 'disabledReply'
 >
 
 export const commentListBaseProps = buildProps({

@@ -164,8 +164,25 @@ export const useCommentList = (
       subCommentIndex = subIndex
     }
 
+    // 如果在主评论和子评论中都没有找到，则认为是新增评论
     if (commentIndex === -1 && subCommentIndex === -1) {
-      debugWarn('TnCommentList', '未找到对应的评论')
+      listData.value.unshift({
+        id: data.id,
+        avatar: data.avatar,
+        nickname: data.nickname,
+        authorNickname: '',
+        date: data.date,
+        position: data.position,
+        content: data.content,
+        allowDelete: data.allowDelete,
+        likeActive: false,
+        likeCount: 0,
+        dislikeActive: false,
+        disabledReply: data.disabledReply,
+        hidden: false,
+        commentCount: 0,
+        comment: [],
+      })
       return
     }
 
@@ -184,7 +201,7 @@ export const useCommentList = (
         likeActive: false,
         likeCount: 0,
         dislikeActive: false,
-        disabledReply: false,
+        disabledReply: data.disabledReply,
       })
     } else {
       const nickname =
